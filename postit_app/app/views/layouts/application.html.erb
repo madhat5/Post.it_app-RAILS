@@ -8,6 +8,21 @@
 </head>
 <body>
 
+  <div id='header'>
+    <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
+  </div>
+
+  <div class='create-form'>
+  	<label>Comment:</label>
+  	<input type='post-comment-input'>
+	<label>Author:</label>
+	<input type='post-author-input'>
+	<button class='create-button' id='button-create-post'>Create a Post</button>
+  </div>
+
+  <div class='post-board' id='post-board'>
+  </div>
+
 <%= yield %>
 
 </body>
