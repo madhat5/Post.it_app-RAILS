@@ -1,14 +1,30 @@
 <div class='container'>
 
-<!--   <div class='create-form'>
-  	<label>Comment:</label>
-  	<input type='post-comment-input'>
-	<label>Author:</label>
-	<input type='post-author-input'>
-	<button class='create-button' id='button-create-post'>Create a Post</button>
+<div id='header'>
+    <h2 class='greeting' id='greeting-title'>Welcome to Post(it)</h2>
   </div>
 
-  <div class='post-board' id='post-board'>
-  </div> -->
+  <div id='content-wrapper' ngmyposts>
+
+    <div class='create-form'>
+      <label>Comment:</label>
+      <input type='text' ng-model='my.formPostComment'>
+      <label>Author:</label>
+      <input type='text' ng-model='my.formPostAuthor'>
+      <button class='create-button' id='button-create-post' ng-click='my.addPost()'>Create a Post</button>
+    </div>
+
+    <div class='post-board' id='post-board'>
+      <div ng-repeat='post in my.posts'>
+        <div class='post-container'>
+          {{post.comment}}<br>
+          @{{post.author}}<br>
+          <br>
+          <button ng-click="my.populateForm(post)">Edit</button>
+          <button ng-click="my.deletePost(post)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
