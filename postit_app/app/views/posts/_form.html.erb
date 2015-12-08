@@ -1,0 +1,10 @@
+<%= form_for @post do |query| %>
+  Comment: <%= query.text_field :comment %>
+  </br>
+  </br>
+  Author: <%= query.text_field :author %>
+  </br>
+  </br>
+  </br>
+  All done? <%= query.submit %>
+<% end %>
