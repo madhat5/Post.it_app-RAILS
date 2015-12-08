@@ -186,7 +186,7 @@ Reference
 ---
 Comments/Notes:
 
-- 
+- using angular, modify readme to reflect this
 
 
 
