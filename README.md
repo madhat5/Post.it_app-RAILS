@@ -150,9 +150,7 @@ App Build Steps:
 	- route test 
 		- rake routes
 
-- Controller --o--
-	- controller create 
-		- touch app/names_controller.rb
+- Controller --ox--
 	- method writeup (per controller)
 		- up to x7 (index, show, create, new, edit, update, delete)
 			- index (website landing)
@@ -188,7 +186,7 @@ Reference
 ---
 Comments/Notes:
 
-- edit biuld steps design (cf mean app)
+- 
 
 
 
