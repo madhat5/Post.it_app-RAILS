@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    render json: @posts
   end
 
   def show
@@ -10,25 +11,20 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    redirect_to posts_path
   end
 
   def new
     @post = Post.new
   end
 
-  # UPDATE
-  def edit
-  end
-
   def update
+    @post = Post.find(params[:id])
     @post.update_attributes(post_params)
-    redirect_to posts_path
   end
 
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
   end
 
   # STRONG PARAMS////////////////////////////
@@ -44,4 +40,11 @@ class PostsController < ApplicationController
 end
 
 # GARBAGE////////////////////////////////////
+
+  # custom actions
+  # def search
+
+  #   @movie = Movie.find(params[:term])
+  #   render json: @movie["Search"]
+  # end
 
