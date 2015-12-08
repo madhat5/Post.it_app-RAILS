@@ -156,13 +156,13 @@ App Build Steps:
 			- index (website landing)
 
 - Views --o--
-	- INDEX/SHOW/CREATE only to start
-		- user index/show
-		- note index/show 
-	- views create 	
-		- touch app/views/posts/index.html.erb
-		- x5 (_form, show, new, edit)
+	- views create (INDEX/SHOW/CREATE to start)
+	- touch app/views/posts/index.html.erb
+	- x5 (_form, show, new, edit)
 	- ?visual framework updates?
+
+- Style
+	- update app/assests/post.scss
 
 - Test
 	- launch server
