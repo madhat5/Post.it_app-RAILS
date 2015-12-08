@@ -155,7 +155,7 @@ App Build Steps:
 		- up to x7 (index, show, create, new, edit, update, delete)
 			- index (website landing)
 
-- Views --o--
+- Views --ox--
 	- views create (INDEX/SHOW/CREATE to start)
 	- touch app/views/posts/index.html.erb
 	- x5 (_form, show, new, edit)
