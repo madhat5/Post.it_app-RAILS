@@ -99,34 +99,60 @@ User story: (UPDATE)
 ---
 App Build Steps:
 
-- App --o--
-	- app setup (rails new name_app -d postgresql)
-	- ensure dependencies (bundle install)
-	- add gems (pry-rails)?
+- App --ox--
+	- rails new name_app -d postgresql
+	- cd / bundle install
+	- ?add gems?
+		- (pry-rails)
 
-- Database --o--
-	- database create/check (rake db:create / rails dbconsole)
-	- model create (rails g model Name >> rails g controller names)
+- Database --x--
+	- database create/check
+		- rake db:create
+		- rails dbconsole
+	- model create 
+		- rails g model Name
+		- rails g controller names
 		- x#tables
-	- update migration files (app/db/migrate)
-	- create JoinTable migrate (rails g migration CreateJoinTable table_names1 table_names2) …by alpha...
-	- schema migrate/test (rake db:migrate / rails dbconsole)
+	- update migration files
+		- app/models
+			- post.rb
+		- db/migrate
+			- ****_create_posts.rb
+	- schema migrate/test
+		- rake db:migrate
+		- rails dbconsole
+	- model update
+		- rails g migration AddCommentAndAuthorToPosts comment:string author:string
+		- rake db:migrate
+		- rails dbconsole
 
 - Test --x--
-	- launch server (rails s)
+	- launch server 
+		- rails s
 
 - Models(Seeds) --o--
-	- models update (app/models/name.rb)
+	- models update 
+		- app/models/
+			- model-name.rb
 	- update seed.rb
-	- import/test (rake db:seed / rails dbconsole)
-	- model test (rails c >> Name.all)
+	- import/test
+		- rake db:seed
+		- rails dbconsole
+	- model test
+		- rails c
+		- Post.all
 
-- Routes --o--
-	- route test (rake routes)
-	- route create (config/route.rb => resources :names)
+- Routes --x--
+	- route create 
+		- config/
+			- routes.rb
+				- resources :names
+	- route test 
+		- rake routes
 
 - Controller --o--
-	- ?controller create (touch app/names_controller.rb)?
+	- controller create 
+		- touch app/names_controller.rb
 	- method writeup (per controller)
 		- up to x7 (index, show, create, new, edit, update, delete)
 			- index (website landing)
@@ -135,13 +161,14 @@ App Build Steps:
 	- INDEX/SHOW/CREATE only to start
 		- user index/show
 		- note index/show 
-	- folder create (mkdir app/views/names)
-	- views create (touch app/views/names/index.html.erb)
+	- views create 	
+		- touch app/views/posts/index.html.erb
 		- x5 (_form, show, new, edit)
 	- ?visual framework updates?
 
 - Test
-	- launch server (rails s)
+	- launch server
+		- rails s
 
 ---
 ---
@@ -150,6 +177,10 @@ Reference
 - Git merging
     - https://github.com/ga-students/wdi_lettuce_students/blob/master/w08/d02/INSTRUCTOR/git_solo.md
 
+- Rails guides:
+	- https://github.com/madhat5/wdi_lettuce_students/tree/master/w05/d04/INSTRUCTOR
+	- https://github.com/madhat5/wdi_lettuce_students/blob/master/w05/d05/INSTRUCTOR/rails_guide2.md
+	- https://github.com/madhat5/wdi_lettuce_students/tree/master/w06/d01/INSTRUCTOR
 
 
 
@@ -157,7 +188,7 @@ Reference
 ---
 Comments/Notes:
 
-- 
+- edit biuld steps design (cf mean app)
 
 
 
