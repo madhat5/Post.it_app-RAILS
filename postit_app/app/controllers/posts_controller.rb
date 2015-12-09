@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    render json: @posts
+
+    respond_to do |thing|
+      thing.json { render json: @posts }
+      thing.html
+    end
   end
 
   def show
@@ -39,8 +43,7 @@ class PostsController < ApplicationController
 
 end
 
-# GARBAGE////////////////////////////////////
-
+# TEMP////////////////////////////////////
   # custom actions
   # def search
 

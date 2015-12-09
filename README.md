@@ -146,27 +146,24 @@ App Build Steps:
 	- route create 
 		- config/
 			- routes.rb
-				- resources :names
+				- root 'posts#index'
+				- resources :posts
 	- route test 
 		- rake routes
 
 - Controller --ox--
 	- method writeup (per controller)
 		- up to x7 (index, show, create, new, edit, update, delete)
-			- index (website landing)
 
 - Views --ox--
-	- views create (INDEX/SHOW/CREATE to start)
 	- touch app/views/posts/index.html.erb
-	- x5 (_form, show, new, edit)
+	- update
+		- application.html.erb
+		- index.html.erb
 	- ?visual framework updates?
 
-- Style
+- Style --o--
 	- update app/assests/post.scss
-
-- Test
-	- launch server
-		- rails s
 
 ---
 ---
