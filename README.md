@@ -146,27 +146,24 @@ App Build Steps:
 	- route create 
 		- config/
 			- routes.rb
-				- resources :names
+				- root 'posts#index'
+				- resources :posts
 	- route test 
 		- rake routes
 
 - Controller --ox--
 	- method writeup (per controller)
 		- up to x7 (index, show, create, new, edit, update, delete)
-			- index (website landing)
 
-- Views --o--
-	- INDEX/SHOW/CREATE only to start
-		- user index/show
-		- note index/show 
-	- views create 	
-		- touch app/views/posts/index.html.erb
-		- x5 (_form, show, new, edit)
+- Views --ox--
+	- touch app/views/posts/index.html.erb
+	- update
+		- application.html.erb
+		- index.html.erb
 	- ?visual framework updates?
 
-- Test
-	- launch server
-		- rails s
+- Style --o--
+	- update app/assests/post.scss
 
 ---
 ---
@@ -186,7 +183,7 @@ Reference
 ---
 Comments/Notes:
 
-- 
+- using angular, modify readme to reflect this
 
 
 
